@@ -1,16 +1,10 @@
 from rest_framework import serializers
-from .models import Category, Flavour, Restaurant
+from .models import Tag, Restaurant
 
 
-class CategoryListSerializer(serializers.ModelSerializer):
+class TagListSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Category
-        fields = "__all__"
-
-
-class FlavourListSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Flavour
+        model = Tag
         fields = "__all__"
 
 

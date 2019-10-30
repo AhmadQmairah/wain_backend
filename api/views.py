@@ -1,18 +1,13 @@
 from django.shortcuts import render
 
 from rest_framework.generics import ListAPIView
-from .models import Category, Flavour, Restaurant
-from .serializers import CategoryListSerializer, FlavourListSerializer, RestaurantListSerializer
+from .models import Tag, Restaurant
+from .serializers import TagListSerializer, RestaurantListSerializer
 
 
-class CategoryListView(ListAPIView):
-    queryset = Category.objects.all()
-    serializer_class = CategoryListSerializer
-
-
-class FlavourListView(ListAPIView):
-    queryset = Flavour.objects.all()
-    serializer_class = FlavourListSerializer
+class TagListView(ListAPIView):
+    queryset = Tag.objects.all()
+    serializer_class = TagListSerializer
 
 
 class RestaurantListView(ListAPIView):
